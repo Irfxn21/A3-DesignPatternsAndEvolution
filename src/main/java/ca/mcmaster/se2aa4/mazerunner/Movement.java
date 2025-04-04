@@ -2,7 +2,7 @@ package ca.mcmaster.se2aa4.mazerunner;
 
 import java.util.ArrayList;
 
-public class Movement extends User implements Move { // Class to determine movement
+public class Movement extends User { // Class to determine movement
 
     private ArrayList<Character> path = new ArrayList<Character>(); // Array list to store moves in path
     private PathCalculator pathCalculator;

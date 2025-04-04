@@ -14,7 +14,7 @@ public class MazeTest {
                 { '#', ' ', ' ', ' ' },
                 { '#', '#', '#', '#' }
         };
-        Maze maze = new Maze(grid);
+        Maze maze = new RightHandAlgo(grid);
         assertEquals(2, maze.getStartRow());
         assertEquals(0, maze.getStartColumn());
     }
@@ -28,7 +28,7 @@ public class MazeTest {
                 { '#', ' ', ' ', ' ' },
                 { '#', '#', '#', '#' }
         };
-        Maze maze = new Maze(grid);
+        Maze maze = new RightHandAlgo(grid);
         assertTrue(maze.wallCheck(2, 2));
         assertFalse(maze.wallCheck(2, 1));
     }
@@ -78,7 +78,7 @@ public class MazeTest {
                 { '#', ' ', ' ', ' ' },
                 { '#', '#', '#', '#' }
         };
-        Maze maze = new Maze(grid);
+        Maze maze = new RightHandAlgo(grid);
         Movement movement = new Movement(2, 0);
         PathChecker pathChecker = new PathChecker(maze, movement);
         assertTrue(pathChecker.verifyPath("FRFLFF"));
@@ -93,7 +93,7 @@ public class MazeTest {
                 { '#', ' ', ' ', ' ' },
                 { '#', '#', '#', '#' }
         };
-        Maze maze = new Maze(grid);
+        Maze maze = new RightHandAlgo(grid);
         Movement movement = new Movement(0, 0);
         PathChecker pathChecker = new PathChecker(maze, movement);
         assertFalse(pathChecker.verifyPath("FF"));
