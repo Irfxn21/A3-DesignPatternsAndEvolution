@@ -43,7 +43,7 @@ public class PathChecker { // Class to verify given path
         }
     }
 
-    private String expandPath(String path) { // Method to convert factorized path into canonical
+    protected String expandPath(String path) { // Method to convert factorized path into canonical
 
         String expanded = "";
         String number = "";
