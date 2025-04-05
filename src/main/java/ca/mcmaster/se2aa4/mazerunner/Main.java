@@ -26,7 +26,7 @@ public class Main {
             String mazeFile = cmd.getOptionValue("i"); // storing name of file
 
             char[][] grid = MazeReader.readMaze(mazeFile); // reading maze file and storing in 2d array
-            Maze maze = new RightHandAlgo(grid); // create an object in Maze
+            Maze maze = new Maze(grid); // create an object in Maze
             Movement user = new Movement(maze.getStartRow(), maze.getStartColumn()); // create an object in Movement
 
             if (cmd.hasOption("p")) { // Check for p flag
