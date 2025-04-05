@@ -70,7 +70,7 @@ public class MazeTest {
     }
 
     @Test
-    public void testCorrectPathVerificationCorrect() {
+    public void testCorrectPathVerification() {
         char[][] grid = {
                 { '#', '#', '#', '#' },
                 { '#', '#', '#', '#' },

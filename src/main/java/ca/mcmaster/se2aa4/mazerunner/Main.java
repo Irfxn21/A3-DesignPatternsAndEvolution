@@ -26,14 +26,14 @@ public class Main {
             String mazeFile = cmd.getOptionValue("i"); // storing name of file
 
             char[][] grid = MazeReader.readMaze(mazeFile); // reading maze file and storing in 2d array
-            Maze maze = new Maze(grid); // create an object in Maze
-            Movement user = new Movement(maze.getStartRow(), maze.getStartColumn()); // create an object in Movement
+            Maze maze = Factory.createMaze(grid); // create an object in Maze
+            Movement user = Factory.createMovement(maze.getStartRow(), maze.getStartColumn());
 
             if (cmd.hasOption("p")) { // Check for p flag
                 String givenPath = cmd.getOptionValue("p"); // Storing given path
                 logger.info("**** Verifying path");
 
-                PathChecker checkPath = new PathChecker(maze, user); // Creates obect in PathChecker
+                PathChecker checkPath = Factory.createPathChecker(maze, user); // Creates obect in PathChecker
                 checkPath.verifyPath(givenPath); // Verify given path
 
             } else {
